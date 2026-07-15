@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,113 +11,146 @@
 <style>
 
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
 
 body {
-    margin: 0;
-    background: #080d12;
-    color: #dce7ee;
-    font-family: "Segoe UI", Arial, sans-serif;
+    margin:0;
+    background:#080d12;
+    color:#dce7ee;
+    font-family:Arial, Helvetica, sans-serif;
 }
+
 
 header {
-    background: #111a22;
-    border-bottom: 1px solid #344553;
-    padding: 25px;
+    background:#111a22;
+    border-bottom:1px solid #344553;
+    padding:25px;
 }
+
 
 .logo {
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 4px;
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:4px;
 }
+
 
 .subtitle {
-    color: #93a8b7;
-    margin-top: 8px;
+    color:#8fa5b5;
+    margin-top:8px;
 }
+
+
 
 .layout {
-    display: flex;
-    min-height: calc(100vh - 100px);
+
+    display:flex;
+    min-height:calc(100vh - 100px);
+
 }
+
+
 
 nav {
-    width: 230px;
-    background: #0d141b;
-    border-right: 1px solid #263642;
-    padding: 20px;
+
+    width:240px;
+    background:#0d141b;
+    border-right:1px solid #263642;
+    padding:20px;
+
 }
+
+
 
 nav a {
-    display: block;
-    color: #b9cad5;
-    text-decoration: none;
-    padding: 12px;
-    margin-bottom: 6px;
-    border-radius: 5px;
+
+    display:block;
+    color:#b9cad5;
+    text-decoration:none;
+    padding:12px;
+    margin-bottom:5px;
+    border-radius:5px;
+
 }
+
+
 
 nav a:hover {
-    background: #1b2a35;
-    color: white;
+
+    background:#1b2a35;
+    color:white;
+
 }
+
+
 
 main {
-    flex: 1;
-    padding: 30px;
+
+    flex:1;
+    padding:30px;
+
 }
+
+
 
 .card {
-    background: #111a22;
-    border: 1px solid #2c3d49;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
+
+    background:#111a22;
+    border:1px solid #2c3d49;
+    border-radius:8px;
+    padding:20px;
+    margin-bottom:20px;
+
 }
+
+
 
 .status {
-    color: #67ff85;
-    font-weight: bold;
+
+    color:#67ff85;
+    font-weight:bold;
+
 }
 
-.warning {
-    color: #ffc857;
-}
+
 
 table {
+
     width:100%;
-    border-collapse: collapse;
+    border-collapse:collapse;
+
 }
+
+
 
 td {
-    padding: 10px;
-    border-bottom:1px solid #253540;
+
+    padding:10px;
+    border-bottom:1px solid #263642;
+
 }
+
+
 
 .label {
-    color:#91a6b5;
+
+    color:#8fa5b5;
+
 }
 
+
+
 footer {
+
     text-align:center;
     padding:20px;
     color:#718592;
     font-size:12px;
-}
-
-@media(max-width:700px){
-
-.layout {
-    display:block;
-}
-
-nav {
-    width:100%;
-}
 
 }
+
+
 
 </style>
 
@@ -131,12 +166,15 @@ nav {
 ARD // PGN-7
 </div>
 
+
 <div class="subtitle">
 Avian Reconnaissance Directorate<br>
-Advanced Urban Surveillance Platform
+Advanced Surveillance Management System
 </div>
 
+
 </header>
+
 
 
 <div class="layout">
@@ -144,27 +182,55 @@ Advanced Urban Surveillance Platform
 
 <nav>
 
-<a href="#">Dashboard</a>
+<a href="index.html">
+Dashboard
+</a>
 
-<a href="hardware.html">Hardware</a>
 
-<a href="firmware.html">Firmware</a>
+<a href="hardware.html">
+Hardware
+</a>
 
-<a href="#">Diagnostics</a>
 
-<a href="#">Telemetry</a>
+<a href="firmware.html">
+Firmware
+</a>
 
-<a href="#">Mission Log</a>
 
-<a href="#">Sensor Array</a>
+<a href="#">
+Diagnostics
+</a>
 
-<a href="#">Power System</a>
 
-<a href="#">Operator Archive</a>
+<a href="#">
+Telemetry
+</a>
 
-<a href="#">Downloads</a>
 
-<a href="#">Security</a>
+<a href="#">
+Mission Log
+</a>
+
+
+<a href="#">
+Sensor Array
+</a>
+
+
+<a href="#">
+Power System
+</a>
+
+
+<a href="#">
+Operator Archive
+</a>
+
+
+<a href="#">
+Security
+</a>
+
 
 </nav>
 
@@ -173,13 +239,16 @@ Advanced Urban Surveillance Platform
 <main>
 
 
+
 <div class="card">
 
 <h2>
 SYSTEM STATUS
 </h2>
 
+
 <table>
+
 
 <tr>
 <td class="label">
@@ -189,18 +258,22 @@ Unit
 <td>
 PGN-7 Rock Dove
 </td>
+
 </tr>
+
 
 
 <tr>
 <td class="label">
-Status
+Operational Status
 </td>
 
 <td class="status">
 ONLINE
 </td>
+
 </tr>
+
 
 
 <tr>
@@ -211,7 +284,9 @@ Firmware
 <td>
 v3.8.15
 </td>
+
 </tr>
+
 
 
 <tr>
@@ -222,149 +297,109 @@ Authentication
 <td class="status">
 VERIFIED
 </td>
+
 </tr>
 
 
 </table>
 
-</div>
-
-
-
-<div class="card">
-
-<h2>
-DEVICE OVERVIEW
-</h2>
-
-<table>
-
-<tr>
-<td class="label">
-Classification
-</td>
-
-<td>
-Urban Avian Reconnaissance Unit
-</td>
-</tr>
-
-
-<tr>
-<td class="label">
-Generation
-</td>
-
-<td>
-7th Generation Platform
-</td>
-</tr>
-
-
-<tr>
-<td class="label">
-Operational Area
-</td>
-
-<td>
-Urban Environment
-</td>
-</tr>
-
-
-<tr>
-<td class="label">
-Recharge Method
-</td>
-
-<td>
-Environmental Energy Collection
-</td>
-</tr>
-
-
-</table>
 
 </div>
 
 
 
 
+
 <div class="card">
 
+
 <h2>
-QUICK DIAGNOSTICS
+WELCOME OPERATOR
 </h2>
+
+
+<p>
+Welcome to the PGN-7 surveillance management interface.
+</p>
+
+
+<p>
+This terminal provides access to system documentation,
+maintenance records and operational archives.
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+CURRENT PARAMETERS
+</h2>
+
 
 <table>
 
+
 <tr>
-<td>
-Optical Sensor
+<td class="label">
+Energy Cell
 </td>
 
-<td class="status">
-PASS
+<td>
+87%
 </td>
+
 </tr>
 
 
 <tr>
+<td class="label">
+Sensor Array
+</td>
+
 <td>
-Navigation Module
-</td>
-
-<td class="status">
-PASS
-</td>
-</tr>
-
-
-<tr>
-<td>
-Communication Link
-</td>
-
-<td class="status">
 ACTIVE
 </td>
+
 </tr>
 
 
 <tr>
-<td>
-Breadcrumb Detection System
+<td class="label">
+Navigation System
 </td>
 
-<td class="warning">
-CALIBRATING
+<td>
+READY
 </td>
+
+</tr>
+
+
+<tr>
+<td class="label">
+Perching Stability
+</td>
+
+<td>
+NORMAL
+</td>
+
 </tr>
 
 
 </table>
 
-</div>
-
-
-
-<div class="card">
-
-<h2>
-LATEST SYSTEM MESSAGE
-</h2>
-
-<p>
-PGN-7 unit operating within expected parameters.
-</p>
-
-<p>
-Next scheduled maintenance:
-<br>
-<strong>After 500 additional rooftop observations.</strong>
-</p>
 
 </div>
+
+
 
 
 </main>
@@ -382,5 +417,7 @@ Document ID: ARD-PGN7-TECH-001
 </footer>
 
 
+
 </body>
+
 </html>
