@@ -4,66 +4,105 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PGN-7 Firmware Database</title>
 
-
 <style>
 
-body {
-    background:#080d12;
-    color:#dce7ee;
-    font-family:Arial, sans-serif;
-    padding:30px;
+*{box-sizing:border-box;}
+
+body{
+margin:0;
+background:#080d12;
+color:#dce7ee;
+font-family:Arial,Helvetica,sans-serif;
 }
 
-
-.card {
-    background:#111a22;
-    border:1px solid #344553;
-    padding:25px;
-    max-width:900px;
-    margin:auto;
-    border-radius:8px;
+header{
+background:#111a22;
+border-bottom:1px solid #344553;
+padding:25px;
 }
 
-
-h1 {
-    letter-spacing:3px;
+.logo{
+font-size:32px;
+font-weight:bold;
+letter-spacing:4px;
 }
 
-
-h2 {
-    color:#9fb4c3;
+.subtitle{
+color:#8fa5b5;
+margin-top:8px;
 }
 
-
-table {
-    width:100%;
-    border-collapse:collapse;
+.layout{
+display:flex;
+min-height:calc(100vh - 100px);
 }
 
-
-td {
-    padding:10px;
-    border-bottom:1px solid #263642;
+nav{
+width:240px;
+background:#0d141b;
+border-right:1px solid #263642;
+padding:20px;
 }
 
-
-.label {
-    color:#8fa5b5;
+nav a{
+display:block;
+color:#b9cad5;
+text-decoration:none;
+padding:12px;
+margin-bottom:5px;
+border-radius:5px;
 }
 
-
-.ok {
-    color:#67ff85;
+nav a:hover{
+background:#1b2a35;
+color:white;
 }
 
-
-.warning {
-    color:#ffc857;
+main{
+flex:1;
+padding:30px;
 }
 
+.card{
+background:#111a22;
+border:1px solid #2c3d49;
+border-radius:8px;
+padding:20px;
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #263642;
+}
+
+.label{
+color:#8fa5b5;
+}
+
+.ok{
+color:#67ff85;
+}
+
+.warning{
+color:#ffc857;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#718592;
+font-size:12px;
+}
 
 </style>
 
@@ -72,39 +111,74 @@ td {
 
 <body>
 
+<header>
+
+<div class="logo">
+ARD // PGN-7
+</div>
+
+<div class="subtitle">
+Avian Reconnaissance Directorate<br>
+Advanced Surveillance Management System
+</div>
+
+</header>
+
+
+<div class="layout">
+
+
+<nav>
+
+<a href="index.html">Dashboard</a>
+
+<a href="hardware.html">Hardware</a>
+
+<a href="firmware.html">Firmware</a>
+
+<a href="#">Diagnostics</a>
+
+<a href="#">Telemetry</a>
+
+<a href="#">Mission Log</a>
+
+<a href="#">Sensor Array</a>
+
+<a href="#">Power System</a>
+
+<a href="#">Operator Archive</a>
+
+<a href="#">Security</a>
+
+</nav>
+
+
+<main>
+
 
 <div class="card">
 
-
-<h1>
-PGN-7 FIRMWARE DATABASE
-</h1>
-
-
 <h2>
-Current Version
+PGN-7 FIRMWARE DATABASE
 </h2>
 
 
 <table>
 
 <tr>
-<td class="label">Firmware</td>
+<td class="label">Current Version</td>
 <td>v3.8.15</td>
 </tr>
-
 
 <tr>
 <td class="label">Release Date</td>
 <td>2026-03-17</td>
 </tr>
 
-
 <tr>
 <td class="label">Status</td>
 <td class="ok">ACTIVE</td>
 </tr>
-
 
 <tr>
 <td class="label">Verification</td>
@@ -113,41 +187,32 @@ Current Version
 
 </table>
 
+</div>
+
+
+
+<div class="card">
 
 <h2>
-Release Notes v3.8.15
+Release Notes
 </h2>
-
 
 <ul>
 
-<li>
-Improved urban environment recognition
-</li>
-
-<li>
-Enhanced rooftop landing stability
-</li>
-
-<li>
-Reduced unnecessary vocal output by 13%
-</li>
-
-<li>
-Improved breadcrumb detection algorithms
-</li>
-
-<li>
-Updated human recognition module
-</li>
-
-<li>
-Fixed unexpected statue interaction behavior
-</li>
+<li>Improved urban environment recognition</li>
+<li>Enhanced rooftop landing stability</li>
+<li>Updated human recognition module</li>
+<li>Reduced unnecessary vocal output</li>
+<li>Improved breadcrumb detection</li>
+<li>Fixed statue interaction anomaly</li>
 
 </ul>
 
+</div>
 
+
+
+<div class="card">
 
 <h2>
 Previous Versions
@@ -156,56 +221,40 @@ Previous Versions
 
 <table>
 
-
 <tr>
 <td>v3.8.14</td>
-<td>
-Improved weather resistance
-</td>
+<td>Weather resistance update</td>
 </tr>
-
 
 <tr>
 <td>v3.8.10</td>
-<td>
-Communication protocol update
-</td>
+<td>Communication protocol update</td>
 </tr>
-
 
 <tr>
 <td>v3.7.02</td>
-<td>
-Wing stabilization improvements
-</td>
+<td>Wing stabilization update</td>
 </tr>
-
-
-<tr>
-<td>v2.9.50</td>
-<td>
-Initial reconnaissance release
-</td>
-</tr>
-
 
 </table>
 
 
-
-<h2>
-Maintenance Notice
-</h2>
+</div>
 
 
-<p class="warning">
-
-Do not interrupt firmware update while unit is perched on electrical infrastructure.
-
-</p>
+</main>
 
 
 </div>
+
+
+
+<footer>
+
+Avian Reconnaissance Directorate © 2026<br>
+Document ID: ARD-PGN7-FW-003
+
+</footer>
 
 
 </body>
