@@ -1,31 +1,159 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
+
 <meta charset="UTF-8">
-<title>PGN-7 Telemetry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PGN-7 Live Telemetry</title>
+
 
 <style>
-body{margin:0;background:#080d12;color:#dce7ee;font-family:Arial}
-header{background:#111a22;padding:25px}
-.logo{font-size:32px;font-weight:bold}
-.layout{display:flex}
-nav{width:240px;background:#0d141b;padding:20px}
-nav a{display:block;color:white;text-decoration:none;padding:10px}
-main{padding:30px}
-.card{background:#111a22;padding:20px;border:1px solid #344553}
-td{padding:10px}
+
+*{
+box-sizing:border-box;
+}
+
+
+body{
+margin:0;
+background:#080d12;
+color:#dce7ee;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+
+header{
+background:#111a22;
+padding:25px;
+border-bottom:1px solid #344553;
+}
+
+
+.logo{
+font-size:32px;
+font-weight:bold;
+letter-spacing:4px;
+}
+
+
+.subtitle{
+color:#8fa5b5;
+}
+
+
+.layout{
+display:flex;
+min-height:calc(100vh - 100px);
+}
+
+
+nav{
+width:240px;
+background:#0d141b;
+padding:20px;
+border-right:1px solid #263642;
+}
+
+
+nav a{
+display:block;
+color:#b9cad5;
+text-decoration:none;
+padding:12px;
+margin-bottom:5px;
+}
+
+
+nav a:hover{
+background:#1b2a35;
+color:white;
+}
+
+
+main{
+flex:1;
+padding:30px;
+}
+
+
+.card{
+background:#111a22;
+border:1px solid #2c3d49;
+border-radius:8px;
+padding:20px;
+margin-bottom:20px;
+}
+
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+
+td{
+padding:12px;
+border-bottom:1px solid #263642;
+}
+
+
+.label{
+color:#8fa5b5;
+}
+
+
+.good{
+color:#67ff85;
+font-weight:bold;
+}
+
+
+.warning{
+color:#ffc857;
+font-weight:bold;
+}
+
+
+.big{
+font-size:28px;
+font-weight:bold;
+}
+
+
+footer{
+text-align:center;
+padding:20px;
+color:#718592;
+font-size:12px;
+}
+
+
 </style>
 
 </head>
 
+
 <body>
 
+
 <header>
-<div class="logo">ARD // PGN-7</div>
-Telemetry Monitoring Network
+
+<div class="logo">
+ARD // PGN-7
+</div>
+
+<div class="subtitle">
+LIVE TELEMETRY MONITORING SYSTEM
+</div>
+
 </header>
 
+
+
 <div class="layout">
+
 
 <nav>
 
@@ -64,27 +192,217 @@ Security
 </nav>
 
 
+
+
 <main>
+
+
 
 <div class="card">
 
-<h2>LIVE TELEMETRY</h2>
+<h2>
+SYSTEM CLOCK
+</h2>
+
+<div class="big" id="clock">
+--
+</div>
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>
+LIVE SENSOR ARRAY
+</h2>
+
 
 <table>
 
-<tr><td>Altitude</td><td>12.4 m</td></tr>
-<tr><td>Battery</td><td>87%</td></tr>
-<tr><td>Temperature</td><td>21°C</td></tr>
-<tr><td>Signal</td><td>98%</td></tr>
-<tr><td>Location</td><td>Urban Sector</td></tr>
+
+<tr>
+<td class="label">
+External Temperature
+</td>
+
+<td id="outside">
+-- °C
+</td>
+</tr>
+
+
+<tr>
+<td class="label">
+Internal Bio-Core Temperature
+</td>
+
+<td id="core">
+-- °C
+</td>
+</tr>
+
+
+<tr>
+<td class="label">
+Battery Cell
+</td>
+
+<td id="battery">
+-- %
+</td>
+</tr>
+
+
+<tr>
+<td class="label">
+Communication Signal
+</td>
+
+<td id="signal">
+-- %
+</td>
+</tr>
+
+
+<tr>
+<td class="label">
+Wing Servo Load
+</td>
+
+<td id="servo">
+-- %
+</td>
+</tr>
+
+
+<tr>
+<td class="label">
+Optical Sensor Activity
+</td>
+
+<td class="good">
+ACTIVE
+</td>
+</tr>
+
 
 </table>
 
+
 </div>
+
+
+
+
+<div class="card">
+
+
+<h2>
+TRANSMISSION STATUS
+</h2>
+
+
+<p class="good">
+LIVE CONNECTION ESTABLISHED
+</p>
+
+
+<p>
+Last packet:
+<span id="packet">
+--
+</span>
+seconds ago
+</p>
+
+
+</div>
+
+
 
 </main>
 
+
 </div>
 
+
+
+<footer>
+
+ARD-PGN7-TLM-LIVE // Automatic Refresh Enabled
+
+</footer>
+
+
+
+<script>
+
+
+function random(min,max){
+
+return (Math.random()*(max-min)+min).toFixed(1);
+
+}
+
+
+
+function update(){
+
+
+let now=new Date();
+
+
+document.getElementById("clock").innerHTML =
+now.toLocaleTimeString("cs-CZ");
+
+
+
+document.getElementById("outside").innerHTML =
+random(15,23)+" °C";
+
+
+
+document.getElementById("core").innerHTML =
+random(39,42)+" °C";
+
+
+
+document.getElementById("battery").innerHTML =
+Math.floor(Math.random()*4+84)+" %";
+
+
+
+document.getElementById("signal").innerHTML =
+Math.floor(Math.random()*5+94)+" %";
+
+
+
+document.getElementById("servo").innerHTML =
+Math.floor(Math.random()*15+8)+" %";
+
+
+document.getElementById("packet").innerHTML =
+Math.floor(Math.random()*5);
+
+
+
+}
+
+
+
+update();
+
+setInterval(update,2000);
+
+
+</script>
+
+
+
 </body>
+
 </html>
